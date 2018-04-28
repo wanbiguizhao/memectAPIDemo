@@ -66,6 +66,10 @@ class DBTable:
         return title, data_list
 
     def _execute_insert_action(self, info_dict={}):
+        """
+        :param info_dict:要插入到数据库的数据。
+        :return:
+        """
         db_conn = get_conn()
         cursor = db_conn.cursor()
         sorted_column_headers_list = []
